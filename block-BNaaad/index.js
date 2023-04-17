@@ -1,14 +1,10 @@
 console.log('Welcome to node.js');
 
 
-function square(num){
-    return num* num;
-}
-console.log(square(7));
+var sum = 0;
 
 for (i = 1; i <= 10; i++) {
-    var sum = 0;
-    sum = sum + i;
+    sum +=i;
   }
   console.log(sum);
 
