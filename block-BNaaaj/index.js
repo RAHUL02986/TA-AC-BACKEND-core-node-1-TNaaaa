@@ -13,17 +13,20 @@ var uptime = os.uptime();
 
 console.log(cpus,freem, version,uptime);
 
-var {readFile, unLinke} = require('fs');
+var {readFile,readFileSync, unLinke,fstat} = require('fs');
 
-
+var sync = readFileSync('./app.js')
+readFile('.app.js',(err,content)=>{
+    console.log(err, content.toString());
+})
 
 var buffer1 = Buffer.alloc(12);
 
 var buffer2 = Buffer.allocUnsafe(12);
 
-buffer1.toString();
+buffer1.write("Hello World");
+console.log(buffer1.toString());
 
-buffer2.toString();
 
 var url = require('url');
 
